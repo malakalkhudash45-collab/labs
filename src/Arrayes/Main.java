@@ -1,10 +1,14 @@
 package Arrayes;
-
+import java.util.Arrays;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int []numbers={1,2,3,4,5};
+        Arrayes arr = new Arrayes();
 
-        for(int i =0 ; i<numbers.length;i++)
-            System.out.println("Index["+i+"])"+" = "+numbers[i]);
-    }
+        int[]numbers2 = new int[5];
+        //arr.update(numbers2,4,7);
+        arr.delete(numbers2,4);
+        arr.Travesal(numbers2);
+
+ }
 }
