@@ -14,6 +14,78 @@ public class Singlylinkedlist<E> {
     public boolean isEmpty(){
         return size()==0;
     }
+//
+public void addFirst(E data){
+    Node<E> newNode=new Node(data,head);
+    head=newNode;
+    if (isEmpty()){
+        tail=newNode;
+    }
+    size++;
+}
+    public E getFirst(){
+        return head.getData();}
+    public E removeFirst(){
+        if (isEmpty()) return null;
+        E delete = head.getData();
+        head=head.getNext();
+        size--;
+        if(isEmpty()){
+            tail=head;
+        }
+        return delete;
+    }
+
+    public void addLast(E data){
+        Node<E> newNode=new Node(data,null);
+        if(isEmpty())
+            head=newNode;
+        else
+            tail.setNext(newNode);
+        tail=newNode;
+        size++;
+    }
+    public E getLast(){
+        return tail.getData();
+    }
+    public E removeLast(){
+        if (isEmpty())return null;
+        E delete=tail.getData();
+        if(head==tail){
+            head=null;
+            tail=null;
+        }
+        else {
+            Node<E>temp=head;
+            while (temp.getNext()!=tail){
+                temp=temp.getNext();
+            }
+            temp.setNext(null);
+            tail=temp;
+        }
+        size--;
+        return delete;
+    }
+    public void display(){
+        Node<E> temp=head;
+        while (temp!=null){
+            System.out.print(temp.getData()+"----->");
+            temp=temp.getNext();
+        }
+        System.out.println("null");
+
+
+    }
+
+    public void display2(){
+        Node<E> temp=head;
+        while (temp!=null){
+            System.out.println(temp.getData()+"");
+            temp=temp.getNext();
+        }
+
+
+    }
 
 
 

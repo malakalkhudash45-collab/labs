@@ -1,9 +1,9 @@
 package Stack;
 
-import SinglyLinkedList.SinglyLinkedList;
+import Singlylinkedlist.Singlylinkedlist;
 
 public class LinkdStack<E> implements Stack<E> {
-    SinglyLinkedList<E> slist=new SinglyLinkedList<E>();
+    Singlylinkedlist<E> slist=new Singlylinkedlist<E>();
     @Override
     public boolean isEmpty() {
         return slist.isEmpty();
@@ -28,6 +28,10 @@ public class LinkdStack<E> implements Stack<E> {
     public E pop() {
         return slist.removeFirst();
     }
+
+
+
+
     public void display(){
         slist.display2();
     }

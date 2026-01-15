@@ -46,6 +46,33 @@ public class DoublyLinkedList<E> {
     public void addLast(E data) {
         addBetween(tail.getPrev(), data, tail);
     }
+    private E remove(Node<E> deletedNode ){
+        if (isEmpty()) return null;
+        E delete=deletedNode.getData();
+        Node<E> left=deletedNode.getPrev();
+        Node<E>right=deletedNode.getNext();
+        left.setNext(right);
+        right.setPrev(left);
+        size--;
+        return delete;
+    }
+    public E removeFirst(){
+        return remove(head.getNext());
+    }
+    public E removeLast(){
+        return remove(tail.getPrev());
+    }
+    public void display(){
+        System.out.print("null<----head<---->");
+        Node<E>temp=head.getNext();
+        while (temp!=tail){
+            System.out.print(temp.getData()+"<---->");
+            temp=temp.getNext();
+        }
+        System.out.println("tail---->null");
+    }
+
+
 
 
     class Node<E> {

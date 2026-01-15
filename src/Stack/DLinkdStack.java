@@ -1,5 +1,7 @@
 package Stack;
 
+import DoublyLinkedList.DoublyLinkedList;
+
 public class DLinkdStack<E> implements Stack<E> {
     DoublyLinkedList<E> dlist=new DoublyLinkedList<E>();
     @Override
@@ -29,10 +31,7 @@ public class DLinkdStack<E> implements Stack<E> {
 
 
 
-
-
     //public void display(){
     // dlist.display2();
 //}
-
 }
