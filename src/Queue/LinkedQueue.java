@@ -1,10 +1,8 @@
 package Queue;
+import Singlylinkedlist.Singlylinkedlist;
 
-import SinglyLinkedList.SinglyLinkedList;
-
-public class LinkedQueue<E>  implements  Queue<E> {
-    SinglyLinkedList<E> slist=new SinglyLinkedList<E>();
-
+public class LinkedQueue<E> implements Queue<E>{
+    Singlylinkedlist<E> slist=new Singlylinkedlist<E>();
     @Override
     public boolean isEmpty() {
         return slist.isEmpty();

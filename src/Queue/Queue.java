@@ -4,11 +4,6 @@ public interface Queue<E> {
     public boolean isEmpty();
     public int size();
     public void enqueue(E data);
-    public E front();
+    public  E front();
     public E dequeue();
-
-
-
-
-
 }
